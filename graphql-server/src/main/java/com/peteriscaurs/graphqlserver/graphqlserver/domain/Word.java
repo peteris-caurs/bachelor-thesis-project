@@ -4,6 +4,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
+ * Scrabble word
+ *
  * @author peteris-caurs
  */
 @Document(collection = "words")
