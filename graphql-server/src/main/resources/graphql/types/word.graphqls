@@ -1,0 +1,42 @@
+# Scrabble word
+type Word {
+    id: ID!
+    headword: String!
+    posTag: PosTag!
+    sources: String!
+    score: Int!
+    length: Int!
+}
+
+# Part of speech tag
+enum PosTag {
+  # Adjective
+  ADJ
+  # Adposition
+  ADP
+  # Adverb
+  ADV
+  # Coordinating conjunction
+  CONJ
+  # Interjection
+  INTJ
+  # Noun
+  NOUN
+  # Numeral
+  NUM
+  # Particle
+  PART
+  # Pronoun
+  PRON
+  # Verb
+  VERB
+  # Other
+  X
+  # Unasigned
+  NULL
+}
+
+# Root query type
+type Query {
+    words: [Word]
+}
