@@ -36,7 +36,16 @@ enum PosTag {
   NULL
 }
 
+# Custom complex input type
+input WordInput {
+    startsWith: String
+    endsWith: String
+    wordLimit: Int
+    lengthLessThan: Int
+}
+
 # Root query type
 type Query {
-    words: [Word]
+    allWords: [Word]
+    specifiedWords(params: WordInput): [Word]
 }
