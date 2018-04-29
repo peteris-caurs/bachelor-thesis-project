@@ -1,4 +1,13 @@
-# GraphQL root schema type
+type Mutation {
+    createUser(input: CreateUserInput): User
+}
+
+type Query {
+    findWordsBy(input: findWordsInput): [Word]
+    findUsers: [User]
+}
+
 schema {
     query: Query
+    mutation: Mutation
 }
