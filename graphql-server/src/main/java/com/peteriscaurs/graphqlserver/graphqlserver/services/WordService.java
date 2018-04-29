@@ -1,7 +1,7 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.services;
 
 import com.peteriscaurs.graphqlserver.graphqlserver.domain.Word;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.WordInput;
+import com.peteriscaurs.graphqlserver.graphqlserver.domain.FindWordsInput;
 import com.peteriscaurs.graphqlserver.graphqlserver.repositories.WordsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -24,20 +24,24 @@ public class WordService {
         this.wordsRepository = wordsRepository;
     }
 
-    public List<Word> getAllWords() {
-        return wordsRepository.findAll().stream()
-                .sorted(Comparator.comparingInt(Word::getScore).reversed())
-                .collect(toList());
+    public List<Word> findWordsBy(FindWordsInput input) {
+        if (input.getPosTag() != null) {
+            return wordsRepository.findAll().stream()
+                    .filter(word -> word.getHeadword().startsWith(input.getStartsWith().toUpperCase()))
+                    .filter(word -> word.getHeadword().endsWith(input.getEndsWith().toUpperCase()))
+                    .filter(word -> word.getPosTag().equals(input.getPosTag()))
+                    .filter(word -> word.getLength() <= input.getMaxLength())
+                    .limit(input.getLimit())
+                    .sorted(Comparator.comparingInt(Word::getScore).reversed())
+                    .collect(toList());
+        } else {
+            return wordsRepository.findAll().stream()
+                    .filter(word -> word.getHeadword().startsWith(input.getStartsWith().toUpperCase()))
+                    .filter(word -> word.getHeadword().endsWith(input.getEndsWith().toUpperCase()))
+                    .filter(word -> word.getLength() <= input.getMaxLength())
+                    .limit(input.getLimit())
+                    .sorted(Comparator.comparingInt(Word::getScore).reversed())
+                    .collect(toList());
+        }
     }
-
-    public List<Word> getSpecifiedWords(WordInput params) {
-        return wordsRepository.findAll().stream()
-                .filter(word -> word.getHeadword().startsWith(params.getStartsWith().toUpperCase()))
-                .filter(word -> word.getHeadword().endsWith(params.getEndsWith().toUpperCase()))
-                .filter(word -> word.getLength() < params.getLengthLessThan())
-                .limit(params.getWordLimit())
-                .sorted(Comparator.comparingInt(Word::getScore).reversed())
-                .collect(toList());
-    }
-
 }
