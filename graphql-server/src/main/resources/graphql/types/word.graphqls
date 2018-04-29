@@ -1,4 +1,3 @@
-# Scrabble word
 type Word {
     id: ID!
     headword: String!
@@ -36,16 +35,10 @@ enum PosTag {
   NULL
 }
 
-# Custom complex input type
-input WordInput {
+input findWordsInput {
     startsWith: String
     endsWith: String
-    wordLimit: Int
-    lengthLessThan: Int
-}
-
-# Root query type
-type Query {
-    allWords: [Word]
-    specifiedWords(params: WordInput): [Word]
+    limit: Int
+    posTag: PosTag
+    maxLength: Int
 }
