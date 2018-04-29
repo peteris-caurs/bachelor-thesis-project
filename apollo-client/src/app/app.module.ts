@@ -4,7 +4,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 // apollo
 import { HttpClientModule } from '@angular/common/http';
-import { ApolloModule ,Apollo } from 'apollo-angular';
+import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
@@ -22,17 +22,17 @@ import { AppComponent } from './app.component';
     ApolloModule,
     HttpLinkModule
   ],
-  schemas: [NO_ERRORS_SCHEMA], 
+  schemas: [NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor(
     apollo: Apollo,
     httpLink: HttpLink
   ) {
     apollo.create({
-      link: httpLink.create({ uri: "http://localhost:8080/graphql" }),
+      link: httpLink.create({ uri: 'http://localhost:8080/graphql' }),
       cache: new InMemoryCache()
     });
   }
