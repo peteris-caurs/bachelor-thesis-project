@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Apollo } from 'apollo-angular';
+
+import { ALL_WORDS } from './types';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  constructor(apollo: Apollo) {
+    apollo.query({query: ALL_WORDS}).subscribe(console.log);
+  }
 }
