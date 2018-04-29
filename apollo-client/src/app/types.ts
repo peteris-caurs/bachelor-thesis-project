@@ -1,9 +1,12 @@
 import gql from 'graphql-tag';
 
 export const ALL_WORDS = gql`
-{
-    allWords {
+  query findWordsByEmptyInput{
+    findWordsBy(input:{}){
       headword
+      posTag
+      score
+      length
     }
-}  
+  }
 `;
