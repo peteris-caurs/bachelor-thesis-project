@@ -1,5 +1,6 @@
 type Mutation {
     createUser(input: CreateUserInput): User
+    signInUser(input: CreateUserInput): SignInPayload
 }
 
 type Query {

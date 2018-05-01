@@ -9,3 +9,8 @@ input CreateUserInput {
     email: String
     password: String
 }
+
+type SignInPayload {
+  token: String
+  user: User
+}

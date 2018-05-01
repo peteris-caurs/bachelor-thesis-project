@@ -1,8 +1,10 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.services;
 
 import com.peteriscaurs.graphqlserver.graphqlserver.domain.CreateUserInput;
+import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignInPayload;
 import com.peteriscaurs.graphqlserver.graphqlserver.domain.User;
 import com.peteriscaurs.graphqlserver.graphqlserver.repositories.UsersRepository;
+import graphql.GraphQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -34,5 +36,13 @@ public class UserService {
         );
 
         return usersRepository.save(user);
+    }
+
+    public SignInPayload signInUser(CreateUserInput createUserInput) {
+        User user = usersRepository.findByEmail(createUserInput.getEmail());
+        if (user.getPassword().equals(createUserInput.getPassword())) {
+            return new SignInPayload(user.getId(), user);
+        }
+        throw new GraphQLException("Invalid credentials");
     }
 }
