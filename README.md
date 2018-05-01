@@ -16,7 +16,7 @@ Here's a table of **top 3 nouns**: <br>
 | žņaudzējčūska |  50   |
 | hidrobioloģija|  48   |
 
-The most valuable word is Latvian Scrabble is **HLOROGĻŪDEŅRAŽI** with a score of **59**! 💪
+The most valuable word in Latvian Scrabble is **HLOROGĻŪDEŅRAŽI** with a score of **59**! 💪
 
 ## Prerequesites
 * Git
