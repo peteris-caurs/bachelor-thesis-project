@@ -5,7 +5,13 @@ type User {
     password: String
 }
 
-input CreateUserInput {
+input SignUpInput {
+    name: String
+    email: String
+    password: String
+}
+
+input SignInInput {
     email: String
     password: String
 }
