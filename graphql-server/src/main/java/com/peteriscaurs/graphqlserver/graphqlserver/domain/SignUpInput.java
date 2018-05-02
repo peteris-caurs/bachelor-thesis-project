@@ -3,16 +3,26 @@ package com.peteriscaurs.graphqlserver.graphqlserver.domain;
 /**
  * @author peteris-caurs
  */
-public class CreateUserInput {
+public class SignUpInput {
 
+    private String name;
     private String email;
     private String password;
 
-    public CreateUserInput() { }
+    public SignUpInput() { }
 
-    public CreateUserInput(String email, String password) {
+    public SignUpInput(String name, String email, String password) {
+        this.name = name;
         this.email = email;
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -33,8 +43,9 @@ public class CreateUserInput {
 
     @Override
     public String toString() {
-        return "CreateUserInput{" +
-                "email='" + email + '\'' +
+        return "SignUpInput{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

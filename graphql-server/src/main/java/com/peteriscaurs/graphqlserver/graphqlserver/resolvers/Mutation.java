@@ -1,7 +1,8 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.CreateUserInput;
+import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignInInput;
+import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignUpInput;
 import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignInPayload;
 import com.peteriscaurs.graphqlserver.graphqlserver.domain.User;
 import com.peteriscaurs.graphqlserver.graphqlserver.services.UserService;
@@ -22,12 +23,12 @@ public class Mutation implements GraphQLMutationResolver {
         this.userService = userService;
     }
 
-    public User createUser(CreateUserInput createUserInput) {
-        return userService.createUser(createUserInput);
+    public User signUpUser(SignUpInput input) {
+        return userService.signUpUser(input);
     }
 
-    public SignInPayload signInUser(CreateUserInput createUserInput) {
-        return userService.signInUser(createUserInput);
+    public SignInPayload signInUser(SignInInput input) {
+        return userService.signInUser(input);
     }
 
 }

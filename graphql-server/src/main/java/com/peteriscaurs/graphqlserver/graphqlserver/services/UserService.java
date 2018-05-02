@@ -1,14 +1,18 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.services;
 
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.CreateUserInput;
+import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignInInput;
 import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignInPayload;
+import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignUpInput;
 import com.peteriscaurs.graphqlserver.graphqlserver.domain.User;
+import com.peteriscaurs.graphqlserver.graphqlserver.exceptions.EmailAlreadyTakenException;
+import com.peteriscaurs.graphqlserver.graphqlserver.exceptions.InvalidCredentialsException;
 import com.peteriscaurs.graphqlserver.graphqlserver.repositories.UsersRepository;
-import graphql.GraphQLException;
+import com.peteriscaurs.graphqlserver.graphqlserver.utilities.MD5Encryptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author peteris-caurs
@@ -27,22 +31,33 @@ public class UserService {
         return usersRepository.findAll();
     }
 
-    public User createUser(CreateUserInput input) {
-        User user = new User(
-                null,
-                null,
-                input.getEmail(),
-                input.getPassword()
-        );
-
-        return usersRepository.save(user);
+    public User signUpUser(SignUpInput input) {
+        // TODO: name not empty, validate email with REGEX, min password length 8
+        Optional<User> existingUser = Optional.ofNullable(usersRepository.findByEmail(input.getEmail()));
+        if (existingUser.isPresent()) {
+            throw new EmailAlreadyTakenException("Email already taken", input.getEmail());
+        } else {
+            User user = new User(
+                    input.getName(),
+                    input.getEmail(),
+                    MD5Encryptor.encrypt(input.getPassword())
+            );
+            return usersRepository.save(user);
+        }
     }
 
-    public SignInPayload signInUser(CreateUserInput createUserInput) {
-        User user = usersRepository.findByEmail(createUserInput.getEmail());
-        if (user.getPassword().equals(createUserInput.getPassword())) {
-            return new SignInPayload(user.getId(), user);
+    public SignInPayload signInUser(SignInInput input) {
+        Optional<User> existingUser = Optional.ofNullable(usersRepository.findByEmail(input.getEmail()));
+        if (existingUser.isPresent()) {
+            final User user = existingUser.get();
+            final String inputPassword = MD5Encryptor.encrypt(input.getPassword());
+            if (user.getPassword().equals(inputPassword)) {
+                return new SignInPayload(user.getId(), user);
+            } else {
+                throw new InvalidCredentialsException("Incorrect email or password");
+            }
+        } else {
+            throw new InvalidCredentialsException("Incorrect email or password");
         }
-        throw new GraphQLException("Invalid credentials");
     }
 }
