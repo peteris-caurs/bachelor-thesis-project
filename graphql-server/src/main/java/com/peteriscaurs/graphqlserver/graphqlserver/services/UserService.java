@@ -9,6 +9,7 @@ import com.peteriscaurs.graphqlserver.graphqlserver.utilities.MD5Encryptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,7 +41,8 @@ public class UserService {
             User user = new User(
                     input.getName(),
                     input.getEmail(),
-                    MD5Encryptor.encrypt(input.getPassword())
+                    MD5Encryptor.encrypt(input.getPassword()),
+                    LocalDate.now().toString()
             );
             return usersRepository.save(user);
         }
