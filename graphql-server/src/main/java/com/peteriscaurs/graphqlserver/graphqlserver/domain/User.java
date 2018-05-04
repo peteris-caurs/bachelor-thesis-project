@@ -1,7 +1,11 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.domain;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author peteris-caurs
@@ -13,6 +17,7 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private List<Word> favorites;
 
     public User() { }
 
@@ -61,6 +66,14 @@ public class User {
         this.password = password;
     }
 
+    public List<Word> getFavorites() {
+        return favorites;
+    }
+
+    public void setFavorites(List<Word> favorites) {
+        this.favorites = favorites;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -68,6 +81,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", favorites=" + favorites +
                 '}';
     }
 

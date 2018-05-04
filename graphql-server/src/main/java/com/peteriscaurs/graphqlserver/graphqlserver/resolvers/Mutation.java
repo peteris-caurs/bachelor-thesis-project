@@ -1,10 +1,7 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignInInput;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignUpInput;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignInPayload;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.User;
+import com.peteriscaurs.graphqlserver.graphqlserver.domain.*;
 import com.peteriscaurs.graphqlserver.graphqlserver.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -29,6 +26,10 @@ public class Mutation implements GraphQLMutationResolver {
 
     public SignInPayload signInUser(SignInInput input) {
         return userService.signInUser(input);
+    }
+
+    public User addWordToFavorites(AddWordToFavoritesInput input) {
+        return userService.addWordToFavorites(input);
     }
 
 }

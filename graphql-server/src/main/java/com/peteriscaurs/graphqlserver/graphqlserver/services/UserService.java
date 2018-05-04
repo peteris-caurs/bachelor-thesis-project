@@ -1,12 +1,10 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.services;
 
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignInInput;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignInPayload;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.SignUpInput;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.User;
+import com.peteriscaurs.graphqlserver.graphqlserver.domain.*;
 import com.peteriscaurs.graphqlserver.graphqlserver.exceptions.EmailAlreadyTakenException;
 import com.peteriscaurs.graphqlserver.graphqlserver.exceptions.InvalidCredentialsException;
 import com.peteriscaurs.graphqlserver.graphqlserver.repositories.UsersRepository;
+import com.peteriscaurs.graphqlserver.graphqlserver.repositories.WordsRepository;
 import com.peteriscaurs.graphqlserver.graphqlserver.utilities.MD5Encryptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -21,10 +19,12 @@ import java.util.Optional;
 public class UserService {
 
     private final UsersRepository usersRepository;
+    private final WordsRepository wordsRepository;
 
     @Autowired
-    public UserService(UsersRepository usersRepository) {
+    public UserService(UsersRepository usersRepository, WordsRepository wordsRepository) {
         this.usersRepository = usersRepository;
+        this.wordsRepository = wordsRepository;
     }
 
     public List<User> getUsers() {
@@ -60,4 +60,10 @@ public class UserService {
             throw new InvalidCredentialsException("Incorrect email or password");
         }
     }
+
+    public User addWordToFavorites(AddWordToFavoritesInput input) {
+        // FIXME
+        return new User();
+    }
+
 }
