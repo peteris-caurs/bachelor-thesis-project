@@ -62,8 +62,10 @@ public class UserService {
     }
 
     public User addWordToFavorites(AddWordToFavoritesInput input) {
-        // FIXME
-        return new User();
+        User user = usersRepository.findOne(input.getUserId());
+        Word favoriteWord = wordsRepository.findOne(input.getWordId());
+        user.getFavorites().add(favoriteWord);
+        return usersRepository.save(user);
     }
 
 }

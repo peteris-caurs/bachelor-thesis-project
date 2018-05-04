@@ -17,7 +17,7 @@ public class User {
     private String name;
     private String email;
     private String password;
-    private List<Word> favorites;
+    @DBRef private List<Word> favorites = new ArrayList<>();
 
     public User() { }
 
