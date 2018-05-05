@@ -18,7 +18,7 @@ input SignInInput {
     password: String
 }
 
-input AddWordToFavoritesInput {
+input UpdateFavoritesInput {
     userId: String
     wordId: String
 }
