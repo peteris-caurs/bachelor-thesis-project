@@ -1,7 +1,8 @@
 type Mutation {
     signUpUser(input: SignUpInput): User
     signInUser(input: SignInInput): SignInPayload
-    addWordToFavorites(input: AddWordToFavoritesInput): User
+    addWordToFavorites(input: UpdateFavoritesInput): User
+    removeWordFromFavorites(input: UpdateFavoritesInput): User
 }
 
 type Query {
