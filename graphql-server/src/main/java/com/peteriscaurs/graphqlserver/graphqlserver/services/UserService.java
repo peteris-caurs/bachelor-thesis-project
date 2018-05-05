@@ -69,7 +69,6 @@ public class UserService {
 
     public User removeWordFromFavorites(UpdateFavoritesInput input) {
         User user = usersRepository.findOne(input.getUserId());
-        Word favoriteWord = wordsRepository.findOne(input.getWordId());
         user.getFavorites().removeIf(word -> word.getId().equals(input.getWordId()));
         return usersRepository.save(user);
     }
