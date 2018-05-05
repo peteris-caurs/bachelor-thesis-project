@@ -3,9 +3,6 @@ package com.peteriscaurs.graphqlserver.graphqlserver.domain;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-/**
- * @author peteris-caurs
- */
 @Document(collection = "words")
 public class Word {
 

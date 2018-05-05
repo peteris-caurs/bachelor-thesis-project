@@ -1,10 +1,5 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.domain;
 
-/**
- * Part of speech tag
- *
- * @author peteris-caurs
- */
 public enum PosTag {
     ADJ,
     ADP,

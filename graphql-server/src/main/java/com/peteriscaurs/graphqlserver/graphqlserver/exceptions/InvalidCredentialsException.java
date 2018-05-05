@@ -6,9 +6,6 @@ import graphql.language.SourceLocation;
 
 import java.util.List;
 
-/**
- * @author peteris-caurs
- */
 public class InvalidCredentialsException extends RuntimeException implements GraphQLError {
 
     public InvalidCredentialsException(String message) {

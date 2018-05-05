@@ -8,9 +8,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author peteris-caurs
- */
 public class EmailAlreadyTakenException extends RuntimeException implements GraphQLError {
 
     private Map<String, Object> extensions = new HashMap<>();

@@ -6,10 +6,6 @@ import com.peteriscaurs.graphqlserver.graphqlserver.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
-/**
- * @author peteris-caurs
- */
 @Component
 public class Mutation implements GraphQLMutationResolver {
 

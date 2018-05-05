@@ -1,8 +1,5 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.utilities;
 
-/**
- * @author peteris-caurs
- */
 public final class WordScoreCalculator {
 
     private WordScoreCalculator() { }

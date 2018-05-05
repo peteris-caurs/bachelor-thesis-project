@@ -13,9 +13,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * @author peteris-caurs
- */
 @Component
 public class UserService {
 

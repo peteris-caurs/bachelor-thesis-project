@@ -7,9 +7,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author peteris-caurs
- */
 @Document(collection = "users")
 public class User {
 

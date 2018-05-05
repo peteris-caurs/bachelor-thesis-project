@@ -1,8 +1,5 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.domain;
 
-/**
- * @author peteris-caurs
- */
 public class SignUpInput {
 
     private String name;

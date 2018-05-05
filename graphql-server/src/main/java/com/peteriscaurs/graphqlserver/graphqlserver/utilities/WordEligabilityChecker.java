@@ -3,9 +3,6 @@ package com.peteriscaurs.graphqlserver.graphqlserver.utilities;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author peteris-caurs
- */
 public final class WordEligabilityChecker {
 
     private WordEligabilityChecker() { }

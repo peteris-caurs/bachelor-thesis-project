@@ -11,9 +11,6 @@ import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-/**
- * @author peteris-caurs
- */
 @Component
 public class WordService {
 
