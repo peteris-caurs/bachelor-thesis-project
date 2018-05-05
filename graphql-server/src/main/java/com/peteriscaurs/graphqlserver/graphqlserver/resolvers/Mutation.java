@@ -24,8 +24,11 @@ public class Mutation implements GraphQLMutationResolver {
         return userService.signInUser(input);
     }
 
-    public User addWordToFavorites(AddWordToFavoritesInput input) {
+    public User addWordToFavorites(UpdateFavoritesInput input) {
         return userService.addWordToFavorites(input);
     }
 
+    public User removeWordFromFavorites(UpdateFavoritesInput input) {
+        return userService.removeWordFromFavorites(input);
+    }
 }
