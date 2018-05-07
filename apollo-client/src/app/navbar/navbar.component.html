@@ -1,0 +1,26 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-light white ie-nav" [containerInside]="false">
+    <logo>
+        <small class="logo navbar-brand font-weight-bold">
+            LOGO
+        </small>
+    </logo>
+    <links>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item waves-light" [routerLinkActive]="['active']" mdbWavesEffect>
+                <a class="nav-link" routerLink="about">par
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item waves-light" [routerLinkActive]="['active']" mdbWavesEffect>
+                <a class="nav-link" routerLink="find-words">meklēt</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link" href="https://github.com/peteris-caurs/latvian-scrabble-app">
+                    <i class="fa fa-github fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </links>
+</mdb-navbar>
