@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { Routes, RouterModule } from '@angular/router';
 
 // apollo
 import { HttpClientModule } from '@angular/common/http';
@@ -14,7 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { FindWordsComponent } from './find-words/find-words.component';
 
-import { Routes, RouterModule } from '@angular/router';
+import { ScrabbleComponent } from './scrabble/scrabble.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'about/scrabble',
+    component: ScrabbleComponent
   },
   {
     path: 'find-words',
@@ -38,7 +43,8 @@ const routes: Routes = [
     NavbarComponent,
     FooterComponent,
     AboutComponent,
-    FindWordsComponent
+    FindWordsComponent,
+    ScrabbleComponent
   ],
   imports: [
     BrowserModule,
