@@ -1,18 +1,17 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light white ie-nav" [containerInside]="false">
     <logo>
         <small class="logo navbar-brand font-weight-bold">
-            LOGO
+            <i class="fa fa-bomb fa-2x"></i>
         </small>
     </logo>
     <links>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item waves-light" [routerLinkActive]="['active']" mdbWavesEffect>
-                <a class="nav-link" routerLink="about">par
-                    <span class="sr-only">(current)</span>
+                <a class="nav-link" routerLink="about">Par
                 </a>
             </li>
             <li class="nav-item waves-light" [routerLinkActive]="['active']" mdbWavesEffect>
-                <a class="nav-link" routerLink="find-words">meklēt</a>
+                <a class="nav-link" routerLink="find-words">Meklēt</a>
             </li>
         </ul>
         <ul class="navbar-nav nav-flex-icons">
@@ -20,6 +19,15 @@
                 <a class="nav-link" href="https://github.com/peteris-caurs/latvian-scrabble-app">
                     <i class="fa fa-github fa-2x"></i>
                 </a>
+            </li>
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                    <i class="fa fa-user-circle fa-2x"></i>
+                </a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-menu-right dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="register">Reģistrēšanās</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="login">Ielogošanās</a>
+                </div>
             </li>
         </ul>
     </links>
