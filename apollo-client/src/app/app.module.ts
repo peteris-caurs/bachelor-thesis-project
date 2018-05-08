@@ -16,6 +16,8 @@ import { AboutComponent } from './about/about.component';
 import { FindWordsComponent } from './find-words/find-words.component';
 
 import { ScrabbleComponent } from './scrabble/scrabble.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,14 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'about/scrabble',
@@ -44,7 +54,9 @@ const routes: Routes = [
     FooterComponent,
     AboutComponent,
     FindWordsComponent,
-    ScrabbleComponent
+    ScrabbleComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
