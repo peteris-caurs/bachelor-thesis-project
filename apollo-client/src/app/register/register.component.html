@@ -1,18 +1,18 @@
-<form [formGroup]="registerForm" class="container-fluid w-50 mb-5">
+<form class="container-fluid w-50 mb-5">
   <h1 class="pt-5 font-weight-bold font-capitalized display-3 text-center">Reģistrēšanās</h1>
-  <div class="md-form">
+  <div>
     <i class="fa fa-user prefix grey-text"></i>
-    <input type="text" formControlName="orangeFormName" id="orangeForm-name" class="form-control" mdbInputDirective>
+    <input type="text" placeholder="lietotājvārds" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
   </div>
-  <div class="md-form">
+  <div>
     <i class="fa fa-envelope prefix grey-text"></i>
-    <input type="text" formControlName="orangeFormEmail" id="orangeForm-email" class="form-control" mdbInputDirective>
+    <input type="text" placeholder="elektroniskais pasts" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
   </div>
-  <div class="md-form">
+  <div>
     <i class="fa fa-lock prefix grey-text"></i>
-    <input type="password" formControlName="orangeFormPass" id="orangeForm-pass" class="form-control" mdbInputDirective>
+    <input type="password"placeholder="slepenais noslēpums" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
   </div>
   <div class="text-center pt-3">
-    <input class="btn btn-pink waves-light" value="Reģistrēties" mdbWavesEffect>
+    <input class="btn btn-pink waves-light" value="Reģistrēties" (click)="signUp()">
   </div>
 </form>
