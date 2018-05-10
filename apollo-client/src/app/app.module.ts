@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { Routes, RouterModule } from '@angular/router';
@@ -60,6 +61,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule, // provides HttpClient for HttpLink
     ApolloModule,
