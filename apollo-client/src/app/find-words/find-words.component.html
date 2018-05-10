@@ -1,3 +1,14 @@
-<p>
-  find-words works!
-</p>
+
+<form class="container-fluid w-50 mb-5">
+  <h1 class="pt-5 font-weight-bold font-capitalized display-3 text-center">Vārdu Meklēšana</h1>
+  <select class="form-control" [(ngModel)]="selectedPosTag" [ngModelOptions]="{standalone: true}">
+    <option *ngFor="let posTag of posTags" [value]="posTag">{{posTag}}</option>
+  </select>
+  <input type="text" class="txt" name="item" placeholder="sākas ar..." [(ngModel)]="startsWith">
+  <input type="text" class="txt" name="item" placeholder="beidzas ar..." [(ngModel)]="endsWith">
+  <input type="number" class="txt" name="item" placeholder="vardu skaits..." [(ngModel)]="limit">
+  <input type="number" class="txt color-pink" name="item" placeholder="max vārda garums..." [(ngModel)]="maxLength">
+  <div class="text-center pt-3">
+    <input type="submit" class="btn btn-pink" value="meklēt" (click)="findWords()">
+  </div>
+</form>
