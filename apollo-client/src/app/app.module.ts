@@ -16,7 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { FindWordsComponent } from './find-words/find-words.component';
 
-import { ScrabbleComponent } from './scrabble/scrabble.component';
+import { ScrabbleComponent } from './about/scrabble/scrabble.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 
