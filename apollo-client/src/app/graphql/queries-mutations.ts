@@ -29,7 +29,7 @@ query findWords(
 `;
 
 export interface FindWordsQueryResponse {
-  words: Word[];
+  findWordsBy: Word[];
   loading: boolean;
 }
 
