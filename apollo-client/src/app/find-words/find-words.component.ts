@@ -49,11 +49,15 @@ export class FindWordsComponent implements OnInit, OnDestroy {
     })
       .valueChanges
       .subscribe((response) => {
-        this.words = response.data.words;
         this.loading = response.data.loading;
+        this.words = response.data.findWordsBy;
       });
 
     this.subscriptions = [...this.subscriptions, findWordsQuerySubscription];
+  }
+
+  findDefinition() {
+    console.log(this);
   }
 
   ngOnDestroy() {
