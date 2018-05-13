@@ -31,3 +31,8 @@ export class User {
     createdAt: string;
     favorites: [Word];
 }
+
+export class SignInPayload {
+    token: string;
+    user: User;
+}

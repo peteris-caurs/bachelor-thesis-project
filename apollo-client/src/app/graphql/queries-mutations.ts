@@ -1,6 +1,7 @@
 import { PosTag } from './types';
 import { Word } from './types';
 import { User } from './types';
+import { SignInPayload } from './types';
 
 import gql from 'graphql-tag';
 
@@ -53,4 +54,25 @@ mutation signUp(
 export interface SignUpUserMutationResponse {
   user: User;
   loading: boolean;
+}
+
+export const SIGNIN_USER_MUTATION = gql`
+mutation signUp(
+    $email: String,
+    $password: String
+){
+  signInUser(input:{
+    email: $email,
+    password: $password
+  }){
+    token
+    user {
+      name
+    }
+  }
+}
+`;
+
+export interface SignInUserMutationResponse {
+  signInPayload: SignInPayload;
 }
