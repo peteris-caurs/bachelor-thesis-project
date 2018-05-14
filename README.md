@@ -1,24 +1,25 @@
 # Latvian Scrabble application
 Query the largest open Latvian lexical database, 
 find out the most valuable words in Latvian Scrabble, 
-create lists of your favorites and share with your friends!  😎🇱🇻 <br>
+create lists of your favorites and share with your friends!  😎 <br>
 
 *Demo GIF of functionality coming soon...*
 
-## Fun Facts
+### Fun Facts
+Here's a table of **top five 3-letter words**: <br>
 
-Words are categorized by their *part of speech tag* like **verb, noun, adverb** etc. <br>
-Here's a table of **top 3 nouns**: <br>
-
-| Noun          | Score |
+| Word          | Score |
 |:-------------:|:-----:|
-| ķieģeļfabrika |  52   |
-| žņaudzējčūska |  50   |
-| hidrobioloģija|  48   |
+|      hoķ      |  23   |
+|      fuķ      |  21   |
+|      ķič      |  21   |
+|      ghī      |  19   |
+|      ķiz      |  19   |
 
 The most valuable word in Latvian Scrabble is **HLOROGĻŪDEŅRAŽI** with a score of **59**! 💪
 
-## Prerequesites
+## Setup
+### Prerequesites
 * Git
 * JDK 1.8 or higher
 * MongoDB
@@ -26,7 +27,7 @@ The most valuable word in Latvian Scrabble is **HLOROGĻŪDEŅRAŽI** with a sco
 * NPM
 * Angular CLI
 
-## Installation
+### Installation
 1. Clone repository <br>
 `git clone https://github.com/peteris-caurs/latvian-scrabble-app.git && cd latvian-scrabble-app/`
 2. Start MongoDB service <br>
@@ -59,9 +60,6 @@ https://github.com/eh3rrera/graphql-java-spring-boot-example
 * Apollo Client For Angular
 [Medium](https://medium.com/codingthesmartway-com-blog/apollo-client-for-angular-making-use-of-graphql-8d9a571e020c "https://medium.com/codingthesmartway-com-blog/apollo-client-for-angular-making-use-of-graphql-8d9a571e020c")<br>
 https://github.com/seeschweiler/apollo-client-angular
-
-## Author
-Pēteris Čaurs - web developer🔥🔥
 
 ## License
 This software is available under the [MIT](./LICENSE) license
