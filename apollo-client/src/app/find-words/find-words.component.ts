@@ -48,7 +48,7 @@ export class FindWordsComponent implements OnInit, OnDestroy {
     })
       .valueChanges
       .subscribe((response) => {
-        this.loading = response.data.loading;
+        this.loading = false;
         this.words = response.data.findWordsBy;
       });
 
@@ -72,6 +72,10 @@ export class FindWordsComponent implements OnInit, OnDestroy {
       });
 
     this.subscriptions = [...this.subscriptions, addWordToFavoritesSubscription];
+  }
+
+  setLoadingTrue() {
+    this.loading = true;
   }
 
   ngOnDestroy() {
