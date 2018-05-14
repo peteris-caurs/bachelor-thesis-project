@@ -45,14 +45,17 @@
                     <i class="fa fa-info-circle fa-2x grey-text"></i>
                   </a>
                 </td>
-                <td><i id="star" class=" fa fa-star fa-2x black-text"></i></td>
+                <td>
+                  <button type="button" class="btn btn-elegant btn-sm waves-light" (click)="addToFavorites(word)">
+                    <i id="star" class=" fa fa-star fa-2x white-text"></i>
+                  </button>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
-          <button type="button" class="btn btn-primary relative waves-light" mdbWavesEffect>Save changes</button>
+          <button type="button" class="btn btn-secondary waves-light" aria-label="Aizvērt" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
         </div>
       </div>
     </div>

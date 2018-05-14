@@ -1,10 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Word } from '../graphql/types';
 import { PosTag } from '../graphql/types';
+import { SignInPayload } from '../graphql/types';
 import { Subscription } from 'rxjs/Subscription';
 import { Apollo } from 'apollo-angular';
 import { FIND_WORDS_QUERY, FindWordsQueryResponse } from '../graphql/queries-mutations';
-
+import { ADD_TO_FAVORITES_MUTATION, AddWordToFavoritesMutationResponse } from '../graphql/queries-mutations';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-find-words',
@@ -23,20 +25,17 @@ export class FindWordsComponent implements OnInit, OnDestroy {
   selectedPosTag: PosTag;
   maxLength: number;
 
+  signInPayload: SignInPayload;
+
   private subscriptions: Subscription[] = [];
 
-  constructor(private apollo: Apollo) { }
+  constructor(private apollo: Apollo, private userService: UserService) { }
   ngOnInit() {
     this.posTags = Object.values(PosTag);
+    this.signInPayload = JSON.parse(this.userService.retrieve());
   }
 
   findWords() {
-    console.log(this.startsWith);
-    console.log(this.endsWith);
-    console.log(this.limit);
-    console.log(this.selectedPosTag);
-    console.log(this.maxLength);
-
     const findWordsQuerySubscription = this.apollo.watchQuery<FindWordsQueryResponse>({
       query: FIND_WORDS_QUERY,
       variables: {
@@ -56,8 +55,23 @@ export class FindWordsComponent implements OnInit, OnDestroy {
     this.subscriptions = [...this.subscriptions, findWordsQuerySubscription];
   }
 
-  findDefinition() {
-    console.log(this);
+  addToFavorites(word: Word) {
+    console.log(this.signInPayload.token);
+    console.log(word.id);
+
+    const addWordToFavoritesSubscription = this.apollo.mutate<AddWordToFavoritesMutationResponse>({
+      mutation: ADD_TO_FAVORITES_MUTATION,
+      variables: {
+        userId: this.signInPayload.token,
+        wordId: word.id,
+      },
+    })
+      .subscribe((response) => {
+        console.log(response.data);
+        this.userService.addWord(word);
+      });
+
+    this.subscriptions = [...this.subscriptions, addWordToFavoritesSubscription];
   }
 
   ngOnDestroy() {
