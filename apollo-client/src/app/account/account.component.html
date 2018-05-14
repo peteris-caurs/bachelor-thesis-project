@@ -1,0 +1,36 @@
+<form class="container-fluid w-50 mb-5 text-center">
+  <h1 class="pt-5 font-weight-bold font-capitalized display-3 text-center">{{ user.name | uppercase}}</h1>
+  <p class="px-5 mb-5 pb-3 lead grey-text">Pievienojies: {{ user.createdAt }}</p>
+  <div *ngIf="user.favorites == 0">
+    <h3 class="text-center grey-text">Pašreiz neesat atzīmējuši nevienu vārdu ar <i id="star" class=" fa fa-star fa-2x yellow-text"></i></h3>
+    <h1 class="text-center font-weight-bold">MEKLĒT VĀRDUS<a routerLink="../find-words"><i id="search" class="fa fa-search fa-4x red-text"></i></a></h1>
+  </div>
+    <table class="table table-hover" *ngIf="user.favorites.length > 0">
+      <thead>
+        <tr>
+          <th>Vārds</th>
+          <th>Burtu Skaits</th>
+          <th>Vērtība</th>
+          <th>Info</th>
+          <th>Patīk</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let word of user.favorites; let i = index">
+        <tr>
+          <td>{{ word.headword }}</td>
+          <td>{{ word.length }}</td>
+          <td>{{ word.score }}</td>
+          <td>
+            <a href="http://www.tezaurs.lv/#/sv/{{ word.headword | lowercase }}" target="_blank">
+              <i class="fa fa-info-circle fa-2x grey-text"></i>
+            </a>
+          </td>
+          <td>
+            <button type="button" class="btn btn-elegant btn-sm waves-light" (click)="removeFromFavorites(i, word)">
+              <i id="star" class=" fa fa-star fa-2x white-text"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
