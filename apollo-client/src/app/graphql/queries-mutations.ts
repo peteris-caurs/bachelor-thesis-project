@@ -68,11 +68,60 @@ mutation signUp(
     token
     user {
       name
+      createdAt
+      favorites {
+        id
+        headword
+        length
+        score
+      }
     }
   }
 }
 `;
 
 export interface SignInUserMutationResponse {
-  signInPayload: SignInPayload;
+  signInUser: SignInPayload;
+}
+
+export const ADD_TO_FAVORITES_MUTATION = gql`
+mutation addWordToFavorites(
+    $userId: String,
+    $wordId: String
+){
+  addWordToFavorites(input:{
+    userId: $userId,
+    wordId: $wordId
+  }){
+    favorites{
+      id
+      headword
+    }
+  }
+}
+`;
+
+export interface AddWordToFavoritesMutationResponse {
+  addWordToFavorites: User;
+}
+
+export const REMOVE_FROM_FAVORITES_MUTATION = gql`
+mutation removeWordFromFavorites(
+    $userId: String,
+    $wordId: String
+){
+  removeWordFromFavorites(input:{
+    userId: $userId,
+    wordId: $wordId
+  }){
+    favorites{
+      id
+      headword
+    }
+  }
+}
+`;
+
+export interface RemoveWordFromFavoritesMutationResponse {
+  removeWordFromFavorites: User;
 }
