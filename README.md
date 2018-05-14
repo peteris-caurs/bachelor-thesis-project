@@ -6,9 +6,9 @@ create lists of your favorites and share with your friends!  😎 <br>
 *Demo GIF of functionality coming soon...*
 
 ### Fun Facts
-Here's a table of **top 3 3-letter words**: <br>
+Here's a table of **top five 3-letter words**: <br>
 
-| Noun          | Score |
+| Word          | Score |
 |:-------------:|:-----:|
 |      hoķ      |  23   |
 |      fuķ      |  21   |
