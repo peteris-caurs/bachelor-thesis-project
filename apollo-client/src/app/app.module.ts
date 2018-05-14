@@ -19,6 +19,8 @@ import { FindWordsComponent } from './find-words/find-words.component';
 import { ScrabbleComponent } from './about/scrabble/scrabble.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { UserService } from './user.service';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   {
@@ -45,6 +47,10 @@ const routes: Routes = [
   {
     path: 'find-words',
     component: FindWordsComponent
+  },
+  {
+    path: 'account',
+    component: AccountComponent
   }
 ];
 
@@ -57,7 +63,8 @@ const routes: Routes = [
     FindWordsComponent,
     ScrabbleComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +76,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
