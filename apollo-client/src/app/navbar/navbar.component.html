@@ -25,8 +25,14 @@
                     <i class="fa fa-user-circle fa-2x"></i>
                 </a>
                 <div *dropdownMenu class="dropdown-menu dropdown dropdown-menu-right dropdown-primary" role="menu">
-                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="register">Reģistrēšanās</a>
-                    <a class="dropdown-item waves-light" mdbWavesEffect routerLink="login">Ielogošanās</a>
+                    <div *ngIf="signInPayload">
+                        <a class="dropdown-item waves-light" mdbWavesEffect routerLink="account" *ngIf="signInPayload">Lietotājs</a>
+                        <a class="dropdown-item waves-light" mdbWavesEffect routerLink="" (click)="logOut();">Izlogoties</a>
+                    </div>
+                    <div *ngIf="!signInPayload">
+                            <a class="dropdown-item waves-light" mdbWavesEffect routerLink="register">Reģistrēšanās</a>
+                            <a class="dropdown-item waves-light" mdbWavesEffect routerLink="login">Ielogošanās</a>
+                        </div>
                 </div>
             </li>
         </ul>
