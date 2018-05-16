@@ -1,4 +1,4 @@
-package com.peteriscaurs.graphqlserver.graphqlserver.domain;
+package com.peteriscaurs.graphqlserver.graphqlserver.types.word;
 
 public class FindWordsInput {
 

@@ -1,7 +1,7 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.services;
 
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.Word;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.FindWordsInput;
+import com.peteriscaurs.graphqlserver.graphqlserver.types.word.Word;
+import com.peteriscaurs.graphqlserver.graphqlserver.types.word.FindWordsInput;
 import com.peteriscaurs.graphqlserver.graphqlserver.repositories.WordsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

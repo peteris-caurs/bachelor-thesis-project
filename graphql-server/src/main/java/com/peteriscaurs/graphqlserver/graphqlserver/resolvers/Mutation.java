@@ -1,8 +1,8 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.*;
 import com.peteriscaurs.graphqlserver.graphqlserver.services.UserService;
+import com.peteriscaurs.graphqlserver.graphqlserver.types.user.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

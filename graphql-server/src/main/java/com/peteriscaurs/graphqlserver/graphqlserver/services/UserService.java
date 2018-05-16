@@ -1,10 +1,11 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.services;
 
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.*;
 import com.peteriscaurs.graphqlserver.graphqlserver.exceptions.EmailAlreadyTakenException;
 import com.peteriscaurs.graphqlserver.graphqlserver.exceptions.InvalidCredentialsException;
 import com.peteriscaurs.graphqlserver.graphqlserver.repositories.UsersRepository;
 import com.peteriscaurs.graphqlserver.graphqlserver.repositories.WordsRepository;
+import com.peteriscaurs.graphqlserver.graphqlserver.types.user.*;
+import com.peteriscaurs.graphqlserver.graphqlserver.types.word.Word;
 import com.peteriscaurs.graphqlserver.graphqlserver.utilities.MD5Encryptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

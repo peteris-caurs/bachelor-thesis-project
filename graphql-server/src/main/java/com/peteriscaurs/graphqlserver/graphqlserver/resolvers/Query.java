@@ -1,9 +1,9 @@
 package com.peteriscaurs.graphqlserver.graphqlserver.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.User;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.Word;
-import com.peteriscaurs.graphqlserver.graphqlserver.domain.FindWordsInput;
+import com.peteriscaurs.graphqlserver.graphqlserver.types.user.User;
+import com.peteriscaurs.graphqlserver.graphqlserver.types.word.Word;
+import com.peteriscaurs.graphqlserver.graphqlserver.types.word.FindWordsInput;
 import com.peteriscaurs.graphqlserver.graphqlserver.services.UserService;
 import com.peteriscaurs.graphqlserver.graphqlserver.services.WordService;
 import org.springframework.beans.factory.annotation.Autowired;

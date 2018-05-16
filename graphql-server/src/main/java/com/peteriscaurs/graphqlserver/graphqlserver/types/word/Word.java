@@ -1,4 +1,4 @@
-package com.peteriscaurs.graphqlserver.graphqlserver.domain;
+package com.peteriscaurs.graphqlserver.graphqlserver.types.word;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
