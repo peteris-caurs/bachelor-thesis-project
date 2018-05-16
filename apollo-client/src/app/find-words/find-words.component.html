@@ -1,18 +1,22 @@
 <div class="container mb-5">
   <h1 class="pt-5 font-weight-bold font-capitalized display-3 text-center">Vārdu Meklēšana</h1>
 
-  <form>
-    <select class="form-control" [(ngModel)]="selectedPosTag" [ngModelOptions]="{standalone: true}">
-      <option *ngFor="let posTag of posTags" [value]="posTag">{{posTag}}</option>
-    </select>
-    <input type="text" class="txt" name="item" placeholder="sākas ar..." [(ngModel)]="startsWith">
-    <input type="text" class="txt" name="item" placeholder="beidzas ar..." [(ngModel)]="endsWith">
-    <input type="number" class="txt" name="item" placeholder="vardu skaits..." [(ngModel)]="limit">
-    <input type="number" class="txt color-pink" name="item" placeholder="max vārda garums..." [(ngModel)]="maxLength">
-    <div class="text-center pt-3">
-      <input type="submit" class="btn btn-pink" value="meklēt" (click)="findWords(); basicModal.show()">
-    </div>
-  </form>
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <form class="col-lg-4">
+      <select class="form-control text-center" [(ngModel)]="selectedPosTag" [ngModelOptions]="{standalone: true}">
+        <option *ngFor="let posTag of posTags" [value]="posTag">{{posTag}}</option>
+      </select>
+      <input type="text" class="text-center" name="item" placeholder="Vārda sākums" [(ngModel)]="startsWith">
+      <input type="text" class="text-center" name="item" placeholder="Vārda beigas" [(ngModel)]="endsWith">
+      <input type="text" class="text-center" name="item" placeholder="Maksimālais burtu skaits" [(ngModel)]="maxLength">
+      <input type="text" class="text-center" name="item" placeholder="Maksimālais atgriezto vārdu skaits" [(ngModel)]="limit">
+      <div class="text-center pt-3">
+        <input type="submit" class="btn btn-pink" value="meklēt" (click)="findWords(); basicModal.show()">
+      </div>
+    </form>
+    <div class="col-lg-4"></div>
+  </div>
 
   <div mdbModal #basicModal="mdb-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
     aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
