@@ -1,10 +1,10 @@
 type Word {
-    id: ID!
-    headword: String!
-    posTag: PosTag!
-    sources: String!
-    score: Int!
-    length: Int!
+    id: ID
+    headword: String
+    posTag: PosTag
+    sources: String
+    score: Int
+    length: Int
 }
 
 # Part of speech tag
