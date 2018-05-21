@@ -31,18 +31,16 @@ public class UserService {
     }
 
     public User signUpUser(SignUpInput input) {
-        // TODO: name not empty, validate email with REGEX, min password length 8
-        Optional<User> existingUser = Optional.ofNullable(usersRepository.findByEmail(input.getEmail()));
-        if (existingUser.isPresent()) {
+        final Optional<User> user = Optional.ofNullable(usersRepository.findByEmail(input.getEmail()));
+        if (user.isPresent()) {
             throw new EmailAlreadyTakenException("Email already taken", input.getEmail());
         } else {
-            User user = new User(
+            return usersRepository.save(new User(
                     input.getName(),
                     input.getEmail(),
                     MD5Encryptor.encrypt(input.getPassword()),
                     LocalDate.now().toString()
-            );
-            return usersRepository.save(user);
+            ));
         }
     }
 
