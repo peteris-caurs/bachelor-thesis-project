@@ -3,23 +3,15 @@ Query the largest open Latvian lexical database,
 find out the most valuable words in Latvian Scrabble, 
 create lists of your favorites and share with your friends!  😎 <br>
 
-# Demo
+# How it works
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lbRuM3H_qoU" target="_blank">
-<img src="http://img.youtube.com/vi/lbRuM3H_qoU/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
+<img src="http://img.youtube.com/vi/lbRuM3H_qoU/0.jpg" alt="Fullstack GraphQL Web Application | Bachelor Thesis Project" width="240" height="180" border="10" />
 </a>
 
 ### Fun Facts
-Here's a table of **top five 3-letter words**: <br>
+The **top five 3-letter words** are [HOĶ (23)](http://www.tezaurs.lv/#/sv/hoķ "http://www.tezaurs.lv/#/sv/hoķ"), [FUČ (21)](http://www.tezaurs.lv/#/sv/fuč "http://www.tezaurs.lv/#/sv/fuč"), [KIČ (21)](http://www.tezaurs.lv/#/sv/kič "http://www.tezaurs.lv/#/sv/kič"), [GHĪ (19)](http://www.tezaurs.lv/#/sv/ghī "http://www.tezaurs.lv/#/sv/ghī") and [ĶIŽ (19)](http://www.tezaurs.lv/#/sv/ķiž "http://www.tezaurs.lv/#/sv/kiž"). <br>
 
-| Word          | Score |
-|:-------------:|:-----:|
-|      hoķ      |  23   |
-|      fuķ      |  21   |
-|      ķič      |  21   |
-|      ghī      |  19   |
-|      ķiz      |  19   |
-
-The most valuable word in Latvian Scrabble is **HLOROGĻŪDEŅRAŽI** with a score of **59**! 💪
+The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI (59)**](http://www.tezaurs.lv/#/sv/hlorogļūdeņraži "http://www.tezaurs.lv/#/sv/hlorogļūdeņraži")! 💪
 
 ## Setup
 ### Prerequesites
@@ -54,15 +46,6 @@ The most valuable word in Latvian Scrabble is **HLOROGĻŪDEŅRAŽI** with a sco
 * Largest open Latvian lexical database 
 [Tēzaurs](http://www.tezaurs.lv/ "http://www.tezaurs.lv/")<br>
 https://github.com/LUMII-AILab/Tezaurs
-* Introduction to graphql-java
-[HowToGraphQL](https://www.howtographql.com/graphql-java/0-introduction/ "https://www.howtographql.com/graphql-java/0-introduction/")<br>
-https://github.com/kaqqao/graphql-java-1
-* Building a GraphQL Server with Spring Boot
-[Pluralsight](https://www.pluralsight.com/guides/building-a-graphql-server-with-spring-boot/ "https://www.pluralsight.com/guides/building-a-graphql-server-with-spring-boot/")<br>
-https://github.com/eh3rrera/graphql-java-spring-boot-example
-* Apollo Client For Angular
-[Medium](https://medium.com/codingthesmartway-com-blog/apollo-client-for-angular-making-use-of-graphql-8d9a571e020c "https://medium.com/codingthesmartway-com-blog/apollo-client-for-angular-making-use-of-graphql-8d9a571e020c")<br>
-https://github.com/seeschweiler/apollo-client-angular
 
 ## License
 This software is available under the [MIT](./LICENSE) license
