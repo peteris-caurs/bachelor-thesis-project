@@ -1,17 +1,17 @@
 # Latvian Scrabble Web Application
 Query the largest open Latvian lexical database, 
 find out the most valuable words in Latvian Scrabble, 
-create lists of your favorites and share with your friends!  😎 <br>
+create lists of your favorites and share with your friends! <br>
 
-# How it works
+## How it works
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lbRuM3H_qoU" target="_blank">
 <img src="http://img.youtube.com/vi/lbRuM3H_qoU/0.jpg" alt="Fullstack GraphQL Web Application | Bachelor Thesis Project" width="240" height="180" border="10" />
 </a>
 
 ### Fun Facts
-The **top five 3-letter words** are [HOĶ (23)](http://www.tezaurs.lv/#/sv/hoķ "http://www.tezaurs.lv/#/sv/hoķ"), [FUČ (21)](http://www.tezaurs.lv/#/sv/fuč "http://www.tezaurs.lv/#/sv/fuč"), [KIČ (21)](http://www.tezaurs.lv/#/sv/kič "http://www.tezaurs.lv/#/sv/kič"), [GHĪ (19)](http://www.tezaurs.lv/#/sv/ghī "http://www.tezaurs.lv/#/sv/ghī") and [ĶIŽ (19)](http://www.tezaurs.lv/#/sv/ķiž "http://www.tezaurs.lv/#/sv/kiž"). <br>
+The **top five 3-letter words** are [HOĶ](http://www.tezaurs.lv/#/sv/hoķ "http://www.tezaurs.lv/#/sv/hoķ") (23), [FUČ](http://www.tezaurs.lv/#/sv/fuč "http://www.tezaurs.lv/#/sv/fuč") (21), [KIČ](http://www.tezaurs.lv/#/sv/kič "http://www.tezaurs.lv/#/sv/kič") (21), [GHĪ](http://www.tezaurs.lv/#/sv/ghī "http://www.tezaurs.lv/#/sv/ghī") (19) and [ĶIŽ](http://www.tezaurs.lv/#/sv/ķiž "http://www.tezaurs.lv/#/sv/kiž") (19). <br>
 
-The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI (59)**](http://www.tezaurs.lv/#/sv/hlorogļūdeņraži "http://www.tezaurs.lv/#/sv/hlorogļūdeņraži")! 💪
+The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI**](http://www.tezaurs.lv/#/sv/hlorogļūdeņraži "http://www.tezaurs.lv/#/sv/hlorogļūdeņraži") (59)!
 
 ## Setup
 ### Prerequesites
@@ -24,15 +24,15 @@ The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI (59)**]
 
 ### Installation
 1. Clone repository <br>
-`git clone https://github.com/peteris-caurs/latvian-scrabble-app.git && cd latvian-scrabble-app/`
+`$ git clone https://github.com/peteris-caurs/latvian-scrabble-app.git && cd latvian-scrabble-app/`
 2. Start MongoDB service <br>
-`service mongod start`
+`$ service mongod start`
 3. Import database <br>
-`cd ./latvianScrabbleDb/ && mongorestore --db latvianScrabbleDb --drop ./`
+`$ cd ./latvianScrabbleDb/ && mongorestore --db latvianScrabbleDb --drop ./`
 4. Start GraphQL server <br>
-`cd ./graphql-server/ && mvn spring-boot:run`
+`$ cd ./graphql-server/ && mvn spring-boot:run`
 5. Install dependencies and start client application <br>
-`cd ./apollo-client/ && npm install && ng serve`
+`$ cd ./apollo-client/ && npm install && ng serve`
 
 ## Endpoints
 ### Server side
@@ -43,8 +43,7 @@ The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI (59)**]
 * Client - http://localhost:4200/ <br>
 
 ## Acknowledgements
-* Largest open Latvian lexical database 
-[Tēzaurs](http://www.tezaurs.lv/ "http://www.tezaurs.lv/")<br>
+Largest open Latvian lexical database [Tēzaurs](http://www.tezaurs.lv/ "http://www.tezaurs.lv/")<br>
 https://github.com/LUMII-AILab/Tezaurs
 
 ## License
