@@ -3,7 +3,7 @@ Query the largest open Latvian lexical database,
 find out the most valuable words in Latvian Scrabble, 
 create lists of your favorites and share with your friends!  😎 <br>
 
-# How it works
+## How it works
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lbRuM3H_qoU" target="_blank">
 <img src="http://img.youtube.com/vi/lbRuM3H_qoU/0.jpg" alt="Fullstack GraphQL Web Application | Bachelor Thesis Project" width="240" height="180" border="10" />
 </a>
