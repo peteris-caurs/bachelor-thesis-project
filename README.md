@@ -9,9 +9,9 @@ create lists of your favorites and share with your friends!  😎 <br>
 </a>
 
 ### Fun Facts
-The **top five 3-letter words** are [HOĶ (23)](http://www.tezaurs.lv/#/sv/hoķ "http://www.tezaurs.lv/#/sv/hoķ"), [FUČ (21)](http://www.tezaurs.lv/#/sv/fuč "http://www.tezaurs.lv/#/sv/fuč"), [KIČ (21)](http://www.tezaurs.lv/#/sv/kič "http://www.tezaurs.lv/#/sv/kič"), [GHĪ (19)](http://www.tezaurs.lv/#/sv/ghī "http://www.tezaurs.lv/#/sv/ghī") and [ĶIŽ (19)](http://www.tezaurs.lv/#/sv/ķiž "http://www.tezaurs.lv/#/sv/kiž"). <br>
+The **top five 3-letter words** are [**HOĶ** ](23) (http://www.tezaurs.lv/#/sv/hoķ "http://www.tezaurs.lv/#/sv/hoķ"), [**FUČ** ](21) (http://www.tezaurs.lv/#/sv/fuč "http://www.tezaurs.lv/#/sv/fuč"), [KIČ ](21) (http://www.tezaurs.lv/#/sv/kič "http://www.tezaurs.lv/#/sv/kič"), [**GHĪ** ](19) (http://www.tezaurs.lv/#/sv/ghī "http://www.tezaurs.lv/#/sv/ghī") and [**ĶIŽ** ](19) (http://www.tezaurs.lv/#/sv/ķiž "http://www.tezaurs.lv/#/sv/kiž"). <br>
 
-The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI (59)**](http://www.tezaurs.lv/#/sv/hlorogļūdeņraži "http://www.tezaurs.lv/#/sv/hlorogļūdeņraži")! 💪
+The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI**] (59) (http://www.tezaurs.lv/#/sv/hlorogļūdeņraži "http://www.tezaurs.lv/#/sv/hlorogļūdeņraži")! 💪
 
 ## Setup
 ### Prerequesites
