@@ -24,15 +24,15 @@ The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI**](http
 
 ### Installation
 1. Clone repository <br>
-`git clone https://github.com/peteris-caurs/latvian-scrabble-app.git && cd latvian-scrabble-app/`
+`$ git clone https://github.com/peteris-caurs/latvian-scrabble-app.git && cd latvian-scrabble-app/`
 2. Start MongoDB service <br>
-`service mongod start`
+`$ service mongod start`
 3. Import database <br>
-`cd ./latvianScrabbleDb/ && mongorestore --db latvianScrabbleDb --drop ./`
+`$ cd ./latvianScrabbleDb/ && mongorestore --db latvianScrabbleDb --drop ./`
 4. Start GraphQL server <br>
-`cd ./graphql-server/ && mvn spring-boot:run`
+`$ cd ./graphql-server/ && mvn spring-boot:run`
 5. Install dependencies and start client application <br>
-`cd ./apollo-client/ && npm install && ng serve`
+`$ cd ./apollo-client/ && npm install && ng serve`
 
 ## Endpoints
 ### Server side
