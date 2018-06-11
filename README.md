@@ -43,8 +43,7 @@ The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI**](http
 * Client - http://localhost:4200/ <br>
 
 ## Acknowledgements
-* Largest open Latvian lexical database 
-[Tēzaurs](http://www.tezaurs.lv/ "http://www.tezaurs.lv/")<br>
+Largest open Latvian lexical database [Tēzaurs](http://www.tezaurs.lv/ "http://www.tezaurs.lv/")<br>
 https://github.com/LUMII-AILab/Tezaurs
 
 ## License
