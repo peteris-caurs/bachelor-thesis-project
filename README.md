@@ -1,7 +1,7 @@
 # Latvian Scrabble Web Application
 Query the largest open Latvian lexical database, 
 find out the most valuable words in Latvian Scrabble, 
-create lists of your favorites and share with your friends!  😎 <br>
+create lists of your favorites and share with your friends! <br>
 
 ## How it works
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lbRuM3H_qoU" target="_blank">
@@ -11,7 +11,7 @@ create lists of your favorites and share with your friends!  😎 <br>
 ### Fun Facts
 The **top five 3-letter words** are [HOĶ](http://www.tezaurs.lv/#/sv/hoķ "http://www.tezaurs.lv/#/sv/hoķ") (23), [FUČ](http://www.tezaurs.lv/#/sv/fuč "http://www.tezaurs.lv/#/sv/fuč") (21), [KIČ](http://www.tezaurs.lv/#/sv/kič "http://www.tezaurs.lv/#/sv/kič") (21), [GHĪ](http://www.tezaurs.lv/#/sv/ghī "http://www.tezaurs.lv/#/sv/ghī") (19) and [ĶIŽ](http://www.tezaurs.lv/#/sv/ķiž "http://www.tezaurs.lv/#/sv/kiž") (19). <br>
 
-The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI**](http://www.tezaurs.lv/#/sv/hlorogļūdeņraži "http://www.tezaurs.lv/#/sv/hlorogļūdeņraži") (59)! 💪
+The **most valuable word** in Latvian Scrabble is [**HLOROGĻŪDEŅRAŽI**](http://www.tezaurs.lv/#/sv/hlorogļūdeņraži "http://www.tezaurs.lv/#/sv/hlorogļūdeņraži") (59)!
 
 ## Setup
 ### Prerequesites
