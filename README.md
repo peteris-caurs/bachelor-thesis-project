@@ -1,9 +1,12 @@
-# Latvian Scrabble application
+# Latvian Scrabble Web Application
 Query the largest open Latvian lexical database, 
 find out the most valuable words in Latvian Scrabble, 
 create lists of your favorites and share with your friends!  😎 <br>
 
-*Demo GIF of functionality coming soon...*
+# Demo
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=lbRuM3H_qoU" target="_blank">
+<img src="http://img.youtube.com/vi/lbRuM3H_qoU/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
+</a>
 
 ### Fun Facts
 Here's a table of **top five 3-letter words**: <br>
